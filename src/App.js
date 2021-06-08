@@ -9,6 +9,9 @@ import CreateWallet from "./components/dashboard/dashboardoperations/CreateWalle
 import NotFound from "./components/shared/NotFound.js";
 import { Provider } from "react-redux";
 import store from "./Store.js";
+import UpdateWallet from "./components/dashboard/dashboardoperations/UpdateWallet.js";
+import Transaction from "./components/transaction/Transaction.js";
+import AddTransaction from "./components/transaction/transactionoperations/AddTransaction.js";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/" exact component={Welcome} />
           <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/createwallet" exact component={CreateWallet}></Route>
+          <Route path="/updatewallet/:id" exact component={UpdateWallet} />
+          <Route path="/transactions/:id" exact component={Transaction}></Route>
+          <Route path="/trns/add/:id" exact component={AddTransaction} />
           <Route path="/" component={NotFound}></Route>
         </Switch>
       </BrowserRouter>
